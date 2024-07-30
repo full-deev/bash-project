@@ -1,0 +1,21 @@
+falta
+
+# Juego principal
+intentos=6
+while [[ $intentos -gt 0 ]]; do
+  dibujar $((6 - INTENTOS))
+  echo "Palabra: $oculta"
+  echo "Letras incorrectas: $INCORRECTAS"
+  read -p "Adivina una letra: " LETRA
+
+  if [[ $PALABRA == *"$LETRA"* ]]; then
+    for i in $(seq 0 $((${#PALABRA} - 1))); do
+      if [[ ${PALABRA:$i:1} == $LETRA ]]; then
+        OCULTA="${OCULTA:0:$i}$LETRA${OCULTA:$(($i + 1))}"
+      fi
+    done
+  else
+    INCORRECTAS+="$LETRA "
+    INTENTOS=$(($INTENTOS - 1))
+  fi
+

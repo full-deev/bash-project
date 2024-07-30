@@ -1,0 +1,10 @@
+ayuda
+#a=$(grep -q "$user" "$archivo")
+	#a=$(awk -F"|" -v var="$user" '$1 ~ var {found=1} END {exit !found}' "$archivo")
+	#a=$(cat $archivo | awk -F "|" '{print $1}')	
+	#if grep -q "$user" "$archivo"; then
+	#	if grep -q "$pass" "$archivo"; then
+	#if [ "$user" == "milo" ] && [ "$pass" == "1408" ]; then
+	
+	#if awk -F"|" -v var="$user" '$1 ~ var {found=1} END {exit !found}' "$archivo"; then
+	#if awk -F"|" -v var="$pass" '$2 ~ var {found=1} END {exit !found}' "$archivo"; then
